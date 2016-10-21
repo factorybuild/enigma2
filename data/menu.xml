@@ -29,14 +29,14 @@
 	</menu>
 
 	<!-- Menu / Timer -->
-	<menu weight="7" level="0" text="Timers" entryID="timer_menu">
+	<!--menu weight="7" level="0" text="Timers" entryID="timer_menu">
 		<id val="timermenu" />
 		<item weight="0" level="0" text="Timers" entryID="timer_edit"><screen module="TimerEdit" screen="TimerEditList" /></item>
 		<item weight="5" level="0" text="PowerTimers" entryID="powertimer_edit"><screen module="PowerTimerEdit" screen="PowerTimerEditList" /></item>
 		<item weight="10" level="0" text="CronTimers" entryID="crontimer_edit"><screen module="CronTimer" screen="CronTimers" /></item>
-	</menu>
+	</menu-->
 
-	<item weight="10" level="1" text="Plugins" entryID="plugin_selection"><screen module="PluginBrowser" screen="PluginBrowser" /></item>
+	<!--item weight="10" level="1" text="Plugins" entryID="plugin_selection"><screen module="PluginBrowser" screen="PluginBrowser" /></item-->
 	<item weight="15" level="1" text="VCR scart" entryID="scart_switch" configcondition="config.usage.show_vcr_scart" requires="ScartSwitch"><code>self.session.scart.VCRSbChanged(3)</code></item>
 
 	<!-- Menu / Settings -->
@@ -58,11 +58,11 @@
 		</menu>
 
 		<!-- Menu / Settings / Recordings -->
-		<menu weight="10" level="1" text="Recordings &amp; Timeshift" entryID="rec_setup">
+		<!--menu weight="10" level="1" text="Recordings &amp; Timeshift" entryID="rec_setup">
 			<id val="rec" />
 			<item weight="10" level="0" text="Recording settings" entryID="recording_setup"><screen module="Recordings" screen="RecordingSettings" /></item>
 			<item weight="15" level="0" text="Timeshift settings" entryID="timshift_setup"><screen module="Timershift" screen="TimeshiftSettings" /></item>
-		</menu>
+		</menu-->
 
 		<!-- Menu / Settings / GUI -->
 		<!-- was: Menu / Settings / System -->

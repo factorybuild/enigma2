@@ -94,10 +94,10 @@
 	</map>
 
 	<map context="InfobarInstantRecord">
-		<key id="KEY_RECORD" mapto="instantRecord" flags="b" />
-		<key id="KEY_RECORD" mapto="ShortRecord" flags="b" />
-		<key id="KEY_RECORD" mapto="LongRecord" flags="l" />
-		<key id="KEY_RED" mapto="instantRecord" flags="b" />
+		<!--key id="KEY_RECORD" mapto="instantRecord" flags="b" /-->
+		<!--key id="KEY_RECORD" mapto="ShortRecord" flags="b" /-->
+		<!--key id="KEY_RECORD" mapto="LongRecord" flags="l" /-->
+		<!--key id="KEY_RED" mapto="instantRecord" flags="b" /-->
 	</map>
 
 	<map context="InfobarExtensions">
@@ -505,51 +505,51 @@
 	</map>
 
 	<map context="InfobarTimeshiftActions">
-		<device name="dreambox advanced remote control (native)">
+		<!--device name="dreambox advanced remote control (native)">
 			<key id="KEY_PLAY" mapto="timeshiftStart" flags="m" />
 			<key id="KEY_TV" mapto="timeshiftStop" flags="m" />
 			<key id="KEY_STOP" mapto="timeshiftStop" flags="m" />
-		</device>
-		<device name="dreambox remote control (native)">
+		</device-->
+		<!--device name="dreambox remote control (native)">
 			<key id="KEY_YELLOW" mapto="timeshiftStart" flags="b" />
 			<key id="KEY_TV" mapto="timeshiftStop" flags="m" />
-		</device>
-		<device name="dreambox ir keyboard">
+		</device-->
+		<!--device name="dreambox ir keyboard">
 			<key id="KEY_YELLOW" mapto="timeshiftStart" flags="m" />
 			<key id="KEY_PAUSE" mapto="timeshiftStart" flags="m" />
 			<key id="KEY_TV" mapto="timeshiftStop" flags="m" />
 			<key id="KEY_STOP" mapto="timeshiftStop" flags="m" />
-		</device>		
-		<key id="KEY_PLAYPAUSE" mapto="timeshiftStart" flags="m" />
-		<key id="KEY_PAUSE" mapto="timeshiftStart" flags="m" />
-		<key id="KEY_STOP" mapto="timeshiftStop" flags="m" />
+		</device-->		
+		<!--key id="KEY_PLAYPAUSE" mapto="timeshiftStart" flags="m" /-->
+		<!--key id="KEY_PAUSE" mapto="timeshiftStart" flags="m" /-->
+		<!--key id="KEY_STOP" mapto="timeshiftStop" flags="m" /-->
 		<!--key id="KEY_TIME" mapto="timeshiftStart" flags="m" /-->
-		<key id="KEY_RECORD" mapto="instantRecord" flags="b" />
-		<key id="KEY_PREVIOUS" mapto="jumpPreviousFile" flags="m" />
-		<key id="KEY_NEXT" mapto="jumpNextFile" flags="m" />
-		<key id="KEY_STOP" mapto="instantRecord" flags="l" />
+		<!--key id="KEY_RECORD" mapto="instantRecord" flags="b" /-->
+		<!--key id="KEY_PREVIOUS" mapto="jumpPreviousFile" flags="m" /-->
+		<!--key id="KEY_NEXT" mapto="jumpNextFile" flags="m" /-->
+		<!--key id="KEY_STOP" mapto="instantRecord" flags="l" /-->
 	</map>
 
 	<map context="InfobarTimeshiftActivateActions">
-		<device name="dreambox advanced remote control (native)">
+		<!--device name="dreambox advanced remote control (native)">
 			<key id="KEY_PREVIOUSSONG" mapto="timeshiftActivateEnd" flags="m" />
-		</device>
+		</device-->
 
 <!--		<key id="KEY_RED" mapto="timeshiftActivateEndR" flags="b" />
 		<key id="KEY_YELLOW" mapto="timeshiftActivateEndAndPauseY" flags="b" /> -->
 
-		<key id="KEY_PLAYPAUSE" mapto="timeshiftActivateEndAndPause" flags="m" />
-		<key id="KEY_PAUSE" mapto="timeshiftActivateEndAndPause" flags="m" />
-		<key id="KEY_REWIND" mapto="timeshiftActivateEnd" flags="m" />
-		<key id="KEY_PREVIOUSSONG" mapto="timeshiftActivateEnd" flags="b" />
+		<!--key id="KEY_PLAYPAUSE" mapto="timeshiftActivateEndAndPause" flags="m" /-->
+		<!--key id="KEY_PAUSE" mapto="timeshiftActivateEndAndPause" flags="m" /-->
+		<!--key id="KEY_REWIND" mapto="timeshiftActivateEnd" flags="m" /-->
+		<!--key id="KEY_PREVIOUSSONG" mapto="timeshiftActivateEnd" flags="b" /-->
 	</map>
 
 	<map context="InfobarTimeshiftSeekPointerActions">
-		<key id="KEY_PLAYPAUSE" mapto="SeekPointerPlay" flags="m" />
-		<key id="KEY_PAUSE" mapto="SeekPointerPlay" flags="m" />
-		<key id="KEY_OK" mapto="SeekPointerOK" flags="m" />
-		<key id="KEY_LEFT" mapto="SeekPointerLeft" flags="mr" />
-		<key id="KEY_RIGHT" mapto="SeekPointerRight" flags="mr" />
+		<!--key id="KEY_PLAYPAUSE" mapto="SeekPointerPlay" flags="m" /-->
+		<!--key id="KEY_PAUSE" mapto="SeekPointerPlay" flags="m" /-->
+		<!--key id="KEY_OK" mapto="SeekPointerOK" flags="m" /-->
+		<!--key id="KEY_LEFT" mapto="SeekPointerLeft" flags="mr" /-->
+		<!--key id="KEY_RIGHT" mapto="SeekPointerRight" flags="mr" /-->
 	</map>
 
 	<map context="MovieSelectionActions">
@@ -947,8 +947,8 @@
 		<key id="KEY_YELLOW" mapto="yellow_long" flags="l"/>
 		<key id="KEY_BLUE" mapto="blue" flags="b"/>
 		<key id="KEY_BLUE" mapto="blue_long" flags="l"/>
-		<key id="KEY_RECORD" mapto="rec" flags="b"/>
-		<key id="KEY_RECORD" mapto="rec_long" flags="l"/>
+		<!--key id="KEY_RECORD" mapto="rec" flags="b"/-->
+		<!--key id="KEY_RECORD" mapto="rec_long" flags="l"/-->
 		<key id="KEY_RADIO" mapto="radio" flags="b"/>
 		<key id="KEY_RADIO" mapto="radio_long" flags="l"/>
 		<key id="KEY_TV" mapto="showTv" flags="b"/>
