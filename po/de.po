@@ -721,6 +721,10 @@ msgid "AC3 downmix"
 msgstr "AC3-Downmix"
 
 #
+msgid "AAC downmix"
+msgstr "AAC-Downmix"
+
+#
 msgid "DTS downmix"
 msgstr "DTS-Downmix"
 
@@ -4329,7 +4333,7 @@ msgid ""
 "Do not care about the bright shades now. They will be set up in the next step.\n"
 "If you are happy with the result, press OK."
 msgstr ""
-"Falls Ihr Fernseher über Helligkeits- oder Kontraststeigerung verfügt, deaktivieren Sie diese. Falls es eine \"Dynamik\"-Einstellung gibt, sollte Sie auf Standard gesetzt werden. Verändern Sie die Intensität der Hintergrundbeleuchtung nach Ihrem Geschmack. Verringern Sie den Kontrast Ihres Fernsehers soweit wie möglich.\n"
+"Falls Ihr Fernseher über Helligkeits- oder Kontraststeigerung verfügt, deaktivieren Sie diese. Falls es eine \"Dynamik\"-Einstellung gibt, sollte sie auf Standard gesetzt werden. Verändern Sie die Intensität der Hintergrundbeleuchtung nach Ihrem Geschmack. Verringern Sie den Kontrast Ihres Fernsehers soweit wie möglich.\n"
 "Verringern Sie anschließend die Helligkeit soweit wie möglich. Stellen Sie dabei sicher, dass die beiden obersten Grauschattierungen erkennbar bleiben. Die hellen Schattierungen werden im folgenden Schritt eingestellt.\n"
 "Drücken Sie OK, wenn Sie mit dem Ergebnis zufrieden sind."
 
@@ -8315,11 +8319,11 @@ msgstr "Timeshift beenden?"
 
 #
 msgid "Stop current event and disable coming events"
-msgstr "Laufenden Aufnahme abbrechen und kommende deaktivieren"
+msgstr "Laufende Aufnahme abbrechen und kommende deaktivieren"
 
 #
 msgid "Stop current event but not coming events"
-msgstr "Laufenden Aufnahme abbrechen, aber kommende ausführen"
+msgstr "Laufende Aufnahme abbrechen, aber kommende ausführen"
 
 #
 msgid "Stop playing this movie?"
@@ -9694,6 +9698,15 @@ msgstr "Nutze Programmnamen des Schnellsuchlaufs"
 msgid "Use fastscan channel numbering"
 msgstr "Nutze Kanalnummerierung des Schnellsuchlaufs"
 
+msgid "Create seperate radio userbouquet"
+msgstr "Erzeuge separates Radiobouquet"
+
+msgid "Enable auto fast scan"
+msgstr "Automatische Schnellsuche aktivieren"
+
+msgid "Enable auto fast scan for %s"
+msgstr "Automatische Schnellsuche aktivieren für %s"
+
 msgid "Use official channel numbering"
 msgstr "Offizielle Kanalnummerierung verwenden"
 
@@ -10727,8 +10740,8 @@ msgid "Default 'Timer type' *"
 msgstr "Standard 'Timer-Art' *"
 
 #: data/setup.xml
-msgid "Default 'After event'"
-msgstr "Standard 'Nach der Aufnahme'"
+msgid "Default 'After event' *"
+msgstr "Standard 'Nach der Aufnahme' *"
 
 #: data/setup.xml
 msgid "Configure default setting for new timers. Need a restart after changing."
@@ -11771,7 +11784,7 @@ msgstr "Bitte geben Sie einen neuen Namen ein:"
 
 #
 msgid "remove from parental protection"
-msgstr "Jugendschutz ausschalten"
+msgstr "Aus Jugendschutz entfernen"
 
 #
 msgid "remove new found flag"
@@ -13239,6 +13252,14 @@ msgstr "Auch bei Skin-Fehlern abstürzen?"
 # data/setup.xml
 msgid "if set to 'no', only an debug message is written to the Debug log "
 msgstr "Wenn die Option auf 'Nein' gesetzt wird, dann gibt es bei Fehlern im Skin nur einen Debug-Log-Eintrag."
+
+# data/setup.xml
+msgid "Log python stack trace on spinner (may have side effects) ?"
+msgstr "Bei Spinner Python Stack Trace loggen (kann Nebeneffekte haben) ?"
+
+# data/setup.xml
+msgid "Set to yes ONLY TEMPORARILY for debugging the root cause of a spinner."
+msgstr "Nur ZEITWEISE auf 'ja' setzen, um die Ursache eines Spinners zu debuggen."
 
 msgid "Space used:"
 msgstr "Speicherplatznutzung:"
@@ -17802,6 +17823,12 @@ msgstr "Entferne MiniTV im Display"
 msgid "Enable MiniTV"
 msgstr "Zeige MiniTV im Display"
 
+msgid "Show PIP in MiniTV"
+msgstr "Zeige PIP im MiniTV"
+
+msgid "Show Live in MiniTV"
+msgstr "Zeige Live im MiniTV"
+
 msgid "Disable FastZapping"
 msgstr "Deaktiviere FastZapping"
 
@@ -18299,6 +18326,12 @@ msgstr "HDMI Farbtiefe"
 
 msgid "This option allows you can config the Colordepth for UHD"
 msgstr "Diese Option erlaubt die Umstellung der Farbtiefe im UHD Modus"
+
+msgid "HDMI HDR Type"
+msgstr "HDMI HDR Mode"
+
+msgid "This option allows you can force the HDR Modes for UHD"
+msgstr "Mit dieser Option können Sie die HDR-Modi für UHD erzwingen"
 
 msgid "Recovery Mode"
 msgstr "Wartungsmodus"
@@ -19445,3 +19478,30 @@ msgstr "Sambia"
 #: CountryCodes.py:250
 msgid "Zimbabwe"
 msgstr "Simbabwe"
+
+msgid "HDMI-IN Recording settings"
+msgstr "HDMI-IN Aufnahmen"
+
+msgid "Frame rate"
+msgstr "Bildwiederholrate"
+
+msgid "Interlaced"
+msgstr "Zeilensprungverfahren"
+
+msgid "The bitrate of the video encoder. Larger value improves quality and increases file size."
+msgstr "Die Bitrate des Videoencoders. Größerer Wert verbessert die Qualität und erhöht die Dateigröße."
+
+msgid "The width of the picture. The input will be scaled to match this value."
+msgstr "Die Breite des Bildes. Die Eingabe wird skaliert, um mit diesem Wert übereinzustimmen."
+
+msgid "The height of the picture. The input will be scaled to match this value."
+msgstr "Die Höhe des Bildes. Die Eingabe wird skaliert, um mit diesem Wert übereinzustimmen."
+
+msgid "The frame rate of the recording. Ideally, this will match the frame rate of the source or be an integer multiple. If in doubt, set to 60, which should work with most sources."
+msgstr "Die Bildrate der Aufnahme. Idealerweise entspricht dies der Bildrate der Quelle oder einem ganzzahligen Vielfachen. Im Zweifelsfall auf 50 einstellen, welches mit den meisten Quellen funktioniert."
+
+msgid "In most cases this should be set to No. Only enable if you have a very specific need."
+msgstr "In den meisten Fällen sollte dies auf Nein eingestellt sein. Nur aktivieren, wenn Sie einen ganz bestimmten Bedarf haben."
+
+msgid "The aspect ratio of the recording."
+msgstr "Das Seitenverhältnis der Aufnahme."

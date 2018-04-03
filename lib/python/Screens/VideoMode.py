@@ -226,6 +226,9 @@ class VideoSetup(Screen, ConfigListScreen):
 		if SystemInfo["havehdmicolordepth"]:
 			self.list.append(getConfigListEntry(_("HDMI Colordepth"), config.av.hdmicolordepth,_("This option allows you can config the Colordepth for UHD")))
 
+		if SystemInfo["havehdmihdrtype"]:
+			self.list.append(getConfigListEntry(_("HDMI HDR Type"), config.av.hdmihdrtype,_("This option allows you can force the HDR Modes for UHD")))
+
 		if SystemInfo["Canedidchecking"]:
 			self.list.append(getConfigListEntry(_("Bypass HDMI EDID Check"), config.av.bypass_edid_checking,_("This option allows you to bypass HDMI EDID check")))
 
@@ -246,7 +249,7 @@ class VideoSetup(Screen, ConfigListScreen):
 
 		if int(res) > int(config_res) or (int(res) == int(config_res) and ((pol == 'p' and config_pol == 'i') or (config_mode == '2160p30' and mode == '2160p'))):
 			setmode[config_port].setValue(config_mode)
-		if config_rate != 'multi' and (rate == 'multi' or int(config_rate) < int(rate)):
+		if config_rate not in ("auto","multi") and (rate == 'multi' or int(config_rate) < int(rate)):
 			setrate[config_mode].setValue(config_rate)
 
 	def keyLeft(self):
