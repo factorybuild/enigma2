@@ -8658,7 +8658,7 @@ msgid ""
 "The IMDb plugin is not installed!\n"
 "Please install it."
 msgstr ""
-"Das IMDb-Plugin ist niht installiert.\n"
+"Das IMDb-Plugin ist nicht installiert.\n"
 "Bitte installieren."
 
 msgid ""
@@ -19505,3 +19505,48 @@ msgstr "In den meisten Fällen sollte dies auf Nein eingestellt sein. Nur aktivi
 
 msgid "The aspect ratio of the recording."
 msgstr "Das Seitenverhältnis der Aufnahme."
+
+msgid "Allow unsupported modes"
+msgstr "Erlaube nicht unterstützte Modi"
+
+msgid "This option allows you to use all HDMI Modes"
+msgstr "Mit dieser Option können Sie alle HDMI-Modi verwenden"
+
+msgid "Use automatic mode detection.\n This option reads all supported modes from your TV.\n Please disable it only if you want to customize the preferred configuration."
+msgstr "Verwenden Sie die Automatische Modus Erkennung.\nDie Option liest alle unterstützten Modi von Ihrem TV Gerät.\nBitte deaktivieren Sie es nur, wenn Sie die bevorzugte Konfiguration anpassen möchten."
+
+msgid "Default Modes Selected."
+msgstr "Standardmodi ausgewählt."
+
+msgid "Auto Modes Selected."
+msgstr "Automodus ausgewählt."
+
+msgid "This option allows you can force the HLG Modes for UHD"
+msgstr "Mit dieser Option können Sie die HLG-Modi für UHD erzwingen"
+
+msgid "This option allows you can force the HDR10 Modes for UHD"
+msgstr "Mit dieser Option können Sie die HDR10-Modi für UHD erzwingen"
+
+msgid "This option allows you can enable or disable the 12 Bit Color Mode"
+msgstr "Mit dieser Option können Sie den 12-Bit-Farbmodus aktivieren oder deaktivieren"
+
+msgid "This option allows you can enable or disable the 10 Bit Color Mode"
+msgstr "Mit dieser Option können Sie den 10-Bit-Farbmodus aktivieren oder deaktivieren"
+
+msgid "HLG Support"
+msgstr "HLG-Unterstützung"
+
+msgid "HDR10 Support"
+msgstr "HDR10 Unterstützung"
+
+msgid "Allow 12bit"
+msgstr "Erlaube 12bit"
+
+msgid "Allow 10bit"
+msgstr "Erlaube 10bit"
+
+msgid "force enabled"
+msgstr "erzwinge aktiviert"
+
+msgid "force disabled"
+msgstr "erzwinge deaktiviert"

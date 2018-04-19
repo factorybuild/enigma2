@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: openATV / enigma2\n"
-"POT-Creation-Date: 2018-03-21 22:50+0300\n"
+"POT-Creation-Date: 2018-04-14 21:15+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME\n"
 "Language-Team: TEAM <EMAIL@ADDRESS>\n"
@@ -1330,6 +1330,12 @@ msgstr ""
 msgid "Allocate unused memory index"
 msgstr ""
 
+msgid "Allow 10bit"
+msgstr ""
+
+msgid "Allow 12bit"
+msgstr ""
+
 msgid "Allow quit movieplayer with exit"
 msgstr ""
 
@@ -1340,6 +1346,9 @@ msgid "Allow subtitles for hearing impaired"
 msgstr ""
 
 msgid "Allow unstable (untested) updates"
+msgstr ""
+
+msgid "Allow unsupported modes"
 msgstr ""
 
 msgid "Allows the %s %s to read the stored EPG data regularly."
@@ -1723,6 +1732,9 @@ msgstr ""
 msgid "Auto Language Selection"
 msgstr ""
 
+msgid "Auto Modes Selected."
+msgstr ""
+
 msgid "Auto scart switching"
 msgstr ""
 
@@ -2012,6 +2024,9 @@ msgid "better"
 msgstr ""
 
 msgid "Big PiP"
+msgstr ""
+
+msgid "Bitrate"
 msgstr ""
 
 msgid "Bitrate:"
@@ -3623,6 +3638,9 @@ msgid "Default 'Timer type' *"
 msgstr ""
 
 msgid "Default files/folders to backup"
+msgstr ""
+
+msgid "Default Modes Selected."
 msgstr ""
 
 msgid "Default movie location"
@@ -5340,7 +5358,13 @@ msgstr ""
 msgid "force AC3plus"
 msgstr ""
 
+msgid "force enabled"
+msgstr ""
+
 msgid "Force de-interlace"
+msgstr ""
+
+msgid "force disabled"
 msgstr ""
 
 msgid "Force Legacy Signal Stats"
@@ -5380,6 +5404,9 @@ msgid "FP Upgrade"
 msgstr ""
 
 msgid "FP upgrade required"
+msgstr ""
+
+msgid "Frame rate"
 msgstr ""
 
 msgid "Frame size in full view"
@@ -5771,6 +5798,15 @@ msgstr ""
 msgid "HDMIin"
 msgstr ""
 
+msgid "HDMI Recording"
+msgstr ""
+
+msgid "HDMI-IN Recording settings"
+msgstr ""
+
+msgid "HDR10 Support"
+msgstr ""
+
 msgid "Hebrew"
 msgstr ""
 
@@ -5862,6 +5898,9 @@ msgid "History next"
 msgstr ""
 
 msgid "History zap..."
+msgstr ""
+
+msgid "HLG Support"
 msgstr ""
 
 msgid "Hold screen"
@@ -6093,13 +6132,16 @@ msgstr ""
 msgid "In expert mode, configure which tuners will be preferred for recordings, when more than one tuner is available."
 msgstr ""
 
-msgid "In the Standby blinking Clock on the LCD Display"
+msgid "In most cases this should be set to No. Only enable if you have a very specific need."
 msgstr ""
 
 msgid "In order to record a timer, a tuner was freed successfully:\n\n"
 msgstr ""
 
 msgid "In progress"
+msgstr ""
+
+msgid "In the Standby blinking Clock on the LCD Display"
 msgstr ""
 
 msgid "Inactive"
@@ -6364,6 +6406,9 @@ msgid "Interface"
 msgstr ""
 
 msgid "Interface: "
+msgstr ""
+
+msgid "Interlaced"
 msgstr ""
 
 msgid "Intermediate"
@@ -7008,6 +7053,9 @@ msgid "Maxdown: "
 msgstr ""
 
 msgid "Maximum no of days:"
+msgstr ""
+
+msgid "Maximum minutes to jump %d !"
 msgstr ""
 
 msgid "Maximum number of days in EPG"
@@ -9704,6 +9752,9 @@ msgstr ""
 msgid "reliable"
 msgstr ""
 
+msgid "reliable, retune"
+msgstr ""
+
 msgid "religion"
 msgstr ""
 
@@ -11527,6 +11578,9 @@ msgstr ""
 msgid "Show HDMI-Output Res"
 msgstr ""
 
+msgid "Show HDMIRecord setup...
+msgstr ""
+
 msgid "Show help"
 msgstr ""
 
@@ -12541,6 +12595,9 @@ msgstr ""
 msgid "StreamingClientsInfo"
 msgstr ""
 
+msgid "Stretch full"
+msgstr ""
+
 msgid "Stretch linear"
 msgstr ""
 
@@ -12937,6 +12994,9 @@ msgstr ""
 msgid "The %s %s stores the EPG data every (hours)."
 msgstr ""
 
+msgid "The aspect ratio of the recording."
+msgstr ""
+
 msgid "The AutoTimer plugin is not installed!\nPlease install it."
 msgstr ""
 
@@ -12944,6 +13004,9 @@ msgid "The available disk space for timeshift is less than specified in the sett
 msgstr ""
 
 msgid "The backup failed. Please choose a different backup location."
+msgstr ""
+
+msgid "The bitrate of the video encoder. Larger value improves quality and increases file size."
 msgstr ""
 
 msgid "The buffer time for timeshift exceeds the specified limit in the settings.\nWhat do you want to do ?"
@@ -12988,6 +13051,12 @@ msgid "The following device was found:\n\n%s\n\nDo you want to write the USB fla
 msgstr ""
 
 msgid "The following files were found..."
+msgstr ""
+
+msgid "The frame rate of the recording. Ideally, this will match the frame rate of the source or be an integer multiple. If in doubt, set to 60, which should work with most sources."
+msgstr ""
+
+msgid "The height of the picture. The input will be scaled to match this value."
 msgstr ""
 
 msgid "The image or kernel will be flashing and auto booted in few minutes.\n"
@@ -13081,6 +13150,9 @@ msgid "The user interface of your %s %s is restarting\ndue to an error in mytest
 msgstr ""
 
 msgid "The VideoMode plugin is not installed!\nPlease install it."
+msgstr ""
+
+msgid "The width of the picture. The input will be scaled to match this value."
 msgstr ""
 
 msgid "The wireless LAN plugin is not installed!\nPlease install it and choose what you want to do next."
@@ -13209,6 +13281,18 @@ msgstr ""
 msgid "This option allows you can config the Colorspace from Auto to RGB"
 msgstr ""
 
+msgid "This option allows you can enable or disable the 10 Bit Color Mode"
+msgstr ""
+
+msgid "This option allows you can enable or disable the 12 Bit Color Mode"
+msgstr ""
+
+msgid "This option allows you can force the HDR10 Modes for UHD"
+msgstr ""
+
+msgid "This option allows you can force the HLG Modes for UHD"
+msgstr ""
+
 msgid "This option allows you choose how to display elapsed time  as + or -"
 msgstr ""
 
@@ -13306,6 +13390,9 @@ msgid "This option allows you to show menu number quick links."
 msgstr ""
 
 msgid "This option allows you to the SNR as a percentage (not all receivers support this)."
+msgstr ""
+
+msgid "This option allows you to use all HDMI Modes"
 msgstr ""
 
 msgid "This option allows you to view the old and new settings side by side."
@@ -13736,6 +13823,9 @@ msgid "Track"
 msgstr ""
 
 msgid "traditional (fast)"
+msgstr ""
+
+msgid "traditional (fast), retune"
 msgstr ""
 
 msgid "Traditional Chinese"
@@ -14185,6 +14275,9 @@ msgid "Use a gateway"
 msgstr ""
 
 msgid "Use as HDD"
+msgstr ""
+
+msgid "Use automatic mode detection.\n This option reads all supported modes from your TV.\n Please disable it only if you want to customize the preferred configuration."
 msgstr ""
 
 msgid "use best / controlled by HDMI"
