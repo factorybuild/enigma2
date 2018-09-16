@@ -219,9 +219,6 @@ msgstr ""
 msgid " ms"
 msgstr " ms"
 
-msgid " packages selected."
-msgstr "Pakete ausgewählt."
-
 #
 msgid "Updates Available:"
 msgstr "Verfügbare Updates:"
@@ -13999,6 +13996,14 @@ msgstr "Bitte warten, Feed-Status wird überprüft"
 msgid "Sorry feeds are down for maintenance, please try again later. If this issue persists please check www.opena.tv"
 msgstr "Feeds sind wegen Wartungsarbeiten im Moment nicht verfügbar, bitte versuchen Sie es später. Für weitere Fragen besuchen Sie bitte www.opena.tv"
 
+#: PluginBrowser.py
+msgid "Sorry feeds are down for maintenance"
+msgstr "Feeds sind wegen Wartungsarbeiten im Moment nicht verfügbar"
+
+#: SoftwareManager
+msgid "packages selected."
+msgstr "Pakete ausgewählt."
+
 #: Download Netzwerk Dienste
 msgid "Your %s %s is not connected to the internet, please check your network settings and try again."
 msgstr "Ihre %s %s hat keine Internetverbindung, bitte prüfen Sie die Netzwerkeinstellungen."
@@ -14967,6 +14972,14 @@ msgstr "Grafisch"
 msgid "Picon and Service Name"
 msgstr "Picon und Sendername"
 
+#
+msgid "Service Number and Service Name"
+msgstr "Kanalnummer und Sendername"
+
+#
+msgid "Service Number, Picon and Service Name"
+msgstr "Kanalnummer, Picon und Sendername"
+
 # Quick Menue
 msgid "Network Browser"
 msgstr "Netzwerk-Browser"
@@ -15154,6 +15167,19 @@ msgstr "Zeit bis zum nächsten Scrollen des LCDs"
 msgid "Show blinking rec symbol on Display during recording"
 msgstr "Blinkendes REC-Symbol im Display bei Aufnahmen"
 
+#: setup.xml
+msgid "Show in Standby"
+msgstr "Im Standby anzeigen"
+
+#: setup.xml
+msgid "This option allows you choose how to display the Time or nothing in Standby"
+msgstr "Mit dieser Option können Sie auswählen, ob die Uhrzeit oder nichts im Standby angezeigt werden sollen."
+
+#: setup.xml
+msgid "REC Symbol in use"
+msgstr "REC Symbol in Betrieb"
+
+#: setup.xml
 msgid "Enable blinking rec symbol on the LCD Display"
 msgstr "Hier können Sie das blinkende Record-Symbol in dem Display aktivieren."
 
@@ -16377,6 +16403,10 @@ msgstr "Suche/Web lang"
 #: ButtonSetup.py
 msgid "Mark/Portal/Playlist"
 msgstr "Mark/Portal/Playlist"
+
+#: ButtonSetup.py
+msgid "Mark/Portal/Playlist long"
+msgstr "Mark/Portal/Playlist lang"
 
 #: ButtonSetup.py
 msgid "Sleep"

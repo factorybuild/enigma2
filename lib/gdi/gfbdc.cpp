@@ -15,7 +15,7 @@
 #include <lib/base/cfile.h>
 #endif
 
-#ifdef CONFIG_ION
+#ifdef CONFIG_ION || defined(CONFIG_HISILICON_FB)
 #include <lib/gdi/grc.h>
 
 extern void bcm_accel_blit(
@@ -26,6 +26,10 @@ extern void bcm_accel_blit(
 		int pal_addr, int flags);
 #endif
 
+#ifdef HAVE_HISILICON_ACCEL
+extern void  dinobot_accel_register(void *p1,void *p2);
+extern void  dinibot_accel_notify(void);
+#endif
 gFBDC::gFBDC()
 {
 	fb=new fbClass;
@@ -171,7 +175,7 @@ void gFBDC::exec(const gOpcode *o)
 #else
 		fb->blit();
 #endif
-#ifdef CONFIG_ION
+#ifdef CONFIG_ION || defined(CONFIG_HISILICON_FB)
 		if (surface_back.data_phys)
 		{
 			gUnmanagedSurface s(surface);
@@ -194,6 +198,9 @@ void gFBDC::exec(const gOpcode *o)
 				0, 0, surface.x, surface.y,
 				0, 0);
 		}
+#endif
+#ifdef HAVE_HISILICON_ACCEL
+		dinibot_accel_notify();
 #endif
 		break;
 	case gOpcode::sendShow:
@@ -322,6 +329,9 @@ void gFBDC::setResolution(int xres, int yres, int bpp)
 		gAccel::getInstance()->setAccelMemorySpace(fb->lfb + fb_size, surface.data_phys + fb_size, fb->Available() - fb_size);
 #endif
 
+#ifdef HAVE_HISILICON_ACCEL
+	dinobot_accel_register(&surface,&surface_back);
+#endif
 	if (!surface.clut.data)
 	{
 		surface.clut.colors = 256;
