@@ -83,7 +83,7 @@ def getAboutText():
 		cpuMHz = "   (1,5 GHz)"
 	elif getMachineBuild() in ('formuler1tc','formuler1', 'triplex', 'tiviaraplus'):
 		cpuMHz = "   (1,3 GHz)"
-	elif getMachineBuild() in ('u51','u5','u53','u52','u5pvr','h9','cc1','sf8008'):
+	elif getMachineBuild() in ('u51','u5','u53','u52','u5pvr','h9','cc1','sf8008','hd60','i55plus','ustym4kpro'):
 		cpuMHz = "   (1,6 GHz)"
 	elif getMachineBuild() in ('vuuno4kse','vuuno4k','dm900','dm920', 'gb7252', 'dags7252','xc7439','8100s'):
 		cpuMHz = "   (1,7 GHz)"
@@ -122,7 +122,7 @@ def getAboutText():
 		f = open('/boot/bootname', 'r')
 		bootname = f.readline().split('=')[1]
 		f.close()
-	if getMachineBuild() in ('cc1','sf8008'):
+	if getMachineBuild() in ('cc1','sf8008','ustym4kpro'):
 		if path.exists('/boot/STARTUP'):
 			f = open('/boot/STARTUP', 'r')
 			f.seek(5)
@@ -180,7 +180,7 @@ def getAboutText():
 	AboutText += _("GStreamer:\t\t%s") % about.getGStreamerVersionString() + "\n"
 	AboutText += _("Python:\t\t%s") % about.getPythonVersionString() + "\n"
 
-	if getMachineBuild() not in ('osmio4k','h9','vuzero4k','sf5008','et13000','et1x000','hd51','hd52','vusolo4k','vuuno4k','vuuno4kse','vuultimo4k','sf4008','dm820','dm7080','dm900','dm920', 'gb7252', 'dags7252', 'vs1500','h7','xc7439','8100s','u5','u5pvr','u52','u53','u51','cc1','sf8008'):
+	if getMachineBuild() not in ('ustym4kpro','hd60','i55plus','osmio4k','h9','vuzero4k','sf5008','et13000','et1x000','hd51','hd52','vusolo4k','vuuno4k','vuuno4kse','vuultimo4k','sf4008','dm820','dm7080','dm900','dm920', 'gb7252', 'dags7252', 'vs1500','h7','xc7439','8100s','u5','u5pvr','u52','u53','u51','cc1','sf8008'):
 		AboutText += _("Installed:\t\t%s") % about.getFlashDateString() + "\n"
 
 	AboutText += _("Last update:\t\t%s") % MyDateConverter(getEnigmaVersionString()) + "\n"
@@ -224,6 +224,16 @@ def getAboutText():
 			tempinfo = f.read()
 			tempinfo = tempinfo[:-4]
 			f.close()
+		except:
+			tempinfo = ""
+	elif path.exists('/proc/hisi/msp/pm_cpu'):
+		try:
+			for line in open('/proc/hisi/msp/pm_cpu').readlines():
+				line = [x.strip() for x in line.strip().split(":")]
+				if line[0] in ("Tsensor"):
+					temp = line[1].split("=")
+					temp = line[1].split(" ")
+					tempinfo = temp[2]
 		except:
 			tempinfo = ""
 	if tempinfo and int(tempinfo.replace('\n', '')) > 0:

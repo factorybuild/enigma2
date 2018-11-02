@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: openATV / enigma2\n"
-"POT-Creation-Date: 2018-09-16 00:25+0300\n"
+"POT-Creation-Date: 2018-10-14 21:17+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME\n"
 "Language-Team: TEAM <EMAIL@ADDRESS>\n"
@@ -35,6 +35,9 @@ msgstr ""
 msgid " (Channel %s)"
 msgstr ""
 
+msgid " (current channel)"
+msgstr ""
+
 msgid " (disabled)"
 msgstr ""
 
@@ -60,6 +63,12 @@ msgid " (TV)"
 msgstr ""
 
 msgid " (unknown mode)"
+msgstr ""
+
+msgid " <empty>"
+msgstr ""
+
+msgid " <No Channel>"
 msgstr ""
 
 msgid " and"
@@ -1053,6 +1062,12 @@ msgstr ""
 msgid "activatePiP"
 msgstr ""
 
+msgid "Activation takes place immediately. If it does feature not work, then try again with a slower send interval."
+msgstr ""
+
+msgid "Activation takes place immediately. If this feature is not supported, the volume keys has no function!"
+msgstr ""
+
 msgid "Active"
 msgstr ""
 
@@ -1446,7 +1461,7 @@ msgstr ""
 msgid "am"
 msgstr ""
 
-msgid "An attempt is made to capture the current TV status. If this is not possible due to incorrect or missing status messages, it may cause the receiver to respond unexpectedly."
+msgid "An attempt is made to capture the current TV status. If this is not possible due to incorrect or missing status messages, it may cause the receiver to respond unexpectedly.\nOn the other hand, tries to respond better to different operating conditions."
 msgstr ""
 
 msgid "An empty filename is illegal."
@@ -2628,10 +2643,13 @@ msgstr ""
 msgid "Choice Box"
 msgstr ""
 
-msgid "Choice where to put "%s""
+msgid "Choice where to put \"%s\""
 msgstr ""
 
 msgid "Choose a tag for easy finding a recording."
+msgstr ""
+
+msgid "Choose a setting where your receiver wakes up from standby."
 msgstr ""
 
 msgid "Choose between Daily, Weekly, Weekdays or user defined."
@@ -5552,6 +5570,9 @@ msgstr ""
 msgid "Full transparency"
 msgstr ""
 
+msgid "FullHD Test"
+msgstr ""
+
 msgid "Fullscreen"
 msgstr ""
 
@@ -5836,7 +5857,7 @@ msgstr ""
 msgid "HD list"
 msgstr ""
 
-msgid "HDD = Do you want to make an USB-back-up image on HDD? \nThis only takes 2 or 10 minutes and is fully automatic."
+msgid "HDD = Do you want to make an USB-back-up image on HDD? \nThis only takes 1 or 10 minutes and is fully automatic."
 msgstr ""
 
 msgid "HDMI"
@@ -6557,6 +6578,9 @@ msgid "IPKGMenu"
 msgstr ""
 
 msgid "IPKGSource"
+msgstr ""
+
+msgid "Is not necessary in most cases."
 msgstr ""
 
 msgid "is strongly advised."
@@ -7824,6 +7848,9 @@ msgstr ""
 msgid "No card inserted!"
 msgstr ""
 
+msgid "No channel"
+msgstr ""
+
 msgid "no channel list"
 msgstr ""
 
@@ -8419,6 +8446,9 @@ msgid "Other"
 msgstr ""
 
 msgid "Overall progress:"
+msgstr ""
+
+msgid "Overscan Test"
 msgstr ""
 
 msgid "Overwrite Bootlogo Files ?"
@@ -9664,6 +9694,9 @@ msgstr ""
 msgid "Really delete done timers?"
 msgstr ""
 
+msgid "Really delete this entry?"
+msgstr ""
+
 msgid "Really exit the subservices quickzap?"
 msgstr ""
 
@@ -10069,6 +10102,9 @@ msgid "repeat playlist"
 msgstr ""
 
 msgid "Repeat the sent standby and wakeup commands"
+msgstr ""
+
+msgid "Repeat the standby commands?"
 msgstr ""
 
 msgid "Repeat type"
@@ -12269,6 +12305,9 @@ msgstr ""
 msgid "Slow motion speeds"
 msgstr ""
 
+msgid "Slowing down for the send interval"
+msgstr ""
+
 msgid "Small progress"
 msgstr ""
 
@@ -12384,6 +12423,9 @@ msgid "Some FullHD-Icons are missing.\nUsing HD-Icons!"
 msgstr ""
 
 msgid "Some plugins are not available:\n"
+msgstr ""
+
+msgid "Some TV devices can't swich to correct input if a another hdmi port active. This setting set the TV to standby before.\n(If the TV does not turn back on, may require a slower transmission interval or the repetition of wake-up commands.)"
 msgstr ""
 
 msgid "Sorry CIHelper Config is Missing"
@@ -12902,6 +12944,9 @@ msgstr ""
 msgid "Switch next channel"
 msgstr ""
 
+msgid "Switch off the TV to correct input"
+msgstr ""
+
 msgid "switch to bookmarks"
 msgstr ""
 
@@ -13280,6 +13325,9 @@ msgid "The software management extension is not installed!\nPlease install it."
 msgstr ""
 
 msgid "The status of the current update could not be checked because http://www.opena.tv could not be reached for some reason"
+msgstr ""
+
+msgid "The time is multiplied by the repeat counter and added to the minimum send interval."
 msgstr ""
 
 msgid "The timer file (pm_timers.xml) is corrupt and could not be loaded."
@@ -13673,9 +13721,6 @@ msgid "This will (re-)calculate all positions of your rotor and may remove previ
 msgstr ""
 
 msgid "This will go fast forward/backward with time frames of x secs"
-msgstr ""
-
-msgid "this will take between 2 and 9 minutes\n"
 msgstr ""
 
 msgid "Three"
@@ -14434,7 +14479,7 @@ msgstr ""
 msgid "USALS calibration"
 msgstr ""
 
-msgid "USB = Do you want to make a back-up on USB?\nThis will take between 4 and 15 minutes depending on the used filesystem and is fully automatic.\nMake sure you first insert an USB flash drive before you select USB."
+msgid "USB = Do you want to make a back-up on USB?\nThis will take between 3 and 15 minutes depending on the used filesystem and is fully automatic.\nMake sure you first insert an USB flash drive before you select USB."
 msgstr ""
 
 msgid "USB Stick"
@@ -14810,6 +14855,9 @@ msgid "VideoEnhancement Setup"
 msgstr ""
 
 msgid "VideoEnhancementPreview"
+msgstr ""
+
+msgid "VideoFinetune"
 msgstr ""
 
 msgid "Videoformat"
@@ -15301,10 +15349,7 @@ msgstr ""
 msgid "width"
 msgstr ""
 
-msgid "will take about 1-4 minutes for this system\n"
-msgstr ""
-
-msgid "will take about 3-12 minutes for this system\n"
+msgid "will take about 1-15 minutes for this system\n"
 msgstr ""
 
 msgid "will take about 30 minutes for this system\n"
@@ -15361,6 +15406,9 @@ msgid "With this option set to 'yes' the channel lists will always show you the 
 msgstr ""
 
 msgid "With this option you can hide Job Tasks from the extension screen (short blue button press)."
+msgstr ""
+
+msgid "With this setting, you can probably improve the signal quality or eliminate problems that can occur with longer HDMI cables."
 msgstr ""
 
 msgid "Without popup"
@@ -15547,6 +15595,9 @@ msgid "You can remove this plugin."
 msgstr ""
 
 msgid "You can select with yellow the OnlineFlash Image\n or select Recovery to create a USB Disk Image for clean Install."
+msgstr ""
+
+msgid "You can skip this function and turn off the TV when you wake the receiver from standby and immediately switch back to standby."
 msgstr ""
 
 msgid "You can switch with left and right this tuner types %s"

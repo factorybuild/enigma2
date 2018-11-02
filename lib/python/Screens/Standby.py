@@ -60,7 +60,7 @@ class TVstate: #load in Navigation
 
 	def getTVstate(self, value):
 		if self.hdmicec_ok:
-			if not config.hdmicec.check_tv_state.value:
+			if not config.hdmicec.check_tv_state.value or self.hdmicec_instance.sendMessagesIsActive():
 				return False
 			elif value == 'on':
 				return value in self.hdmicec_instance.tv_powerstate and config.hdmicec.control_tv_standby.value
@@ -94,7 +94,7 @@ class Standby2(Screen):
 		if os.path.exists("/usr/script/StandbyLeave.sh"):
 			Console().ePopen("/usr/script/StandbyLeave.sh &")
 
-		if (getBrandOEM() in ('fulan','clap','dinobot') or getBoxType() in ('sf8008')):
+		if (getBrandOEM() in ('fulan','clap','dinobot') or getBoxType() in ('sf8008','ustym4kpro')):
 			open("/proc/stb/hdmi/output", "w").write("on")
 		#set input to encoder
 		self.avswitch.setInput("ENCODER")
@@ -207,7 +207,7 @@ class Standby2(Screen):
 			self.avswitch.setInput("SCART")
 		else:
 			self.avswitch.setInput("AUX")
-		if (getBrandOEM() in ('fulan','clap','dinobot') or getBoxType() in ('sf8008')):
+		if (getBrandOEM() in ('fulan','clap','dinobot') or getBoxType() in ('sf8008','ustym4kpro')):
 			open("/proc/stb/hdmi/output", "w").write("off")
 
 		if int(config.usage.hdd_standby_in_standby.value) != -1: # HDD standby timer value (box in standby) / -1 = same as when box is active

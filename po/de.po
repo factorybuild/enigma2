@@ -16,6 +16,27 @@ msgstr ""
 "X-Generator: Poedit 2.1.1\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
+msgid "You can skip this function and turn off the TV when you wake the receiver from standby and immediately switch back to standby."
+msgstr "Sie können diese Funktion überspringen und den TV ausschalten, wenn Sie den Receiver aus dem Standby-Modus aufwecken und sofort wieder in den Standby-Modus wechseln."
+
+msgid "Switch off the TV to correct input"
+msgstr "Schalte den TV aus um den Eingang zu korrigieren"
+
+msgid "Some TV devices can't swich to correct input if a another hdmi port active. This setting set the TV to standby before.\n(If the TV does not turn back on, may require a slower transmission interval or the repetition of wake-up commands.)"
+msgstr "Einige TV-Geräte wechseln nicht den Eingang wenn ein anderer HDMI-Port aktiv ist. Diese Einstellung schaltet den TV zuvor in den Standby.\n(Schaltet der TV nicht wieder an, kann ein langsameres Sendeintervall oder auch die Wiederholung der Aufwachkommandos erforderlich sein.)"
+
+msgid "Activation takes place immediately. If this feature is not supported, the volume keys has no function!"
+msgstr "Die Aktivierung erfolgt sofort. Wenn diese Funktion nicht unterstützt wird sind die Lautstärketasten ohne Funktion!"
+
+msgid "Activation takes place immediately. If it does feature not work, then try again with a slower send interval."
+msgstr "Die Aktivierung erfolgt sofort. Versuchen Sie es mit einem langsameren Sendeintervall, wenn dieses Feature nicht funktioniert."
+
+msgid "Choose a setting where your receiver wakes up from standby."
+msgstr "Wählen Sie eine Einstellung aus, mit der Ihr Receiver aus dem Standby aufwacht."
+
+msgid "With this setting, you can probably improve the signal quality or eliminate problems that can occur with longer HDMI cables."
+msgstr "Mit dieser Einstellung kann man wahrscheinlich die Signalqualität verbessern oder Probleme beseitigen, die bei längeren HDMI Kabeln auftreten können."
+
 msgid "Routing request"
 msgstr "Routinganfrage"
 
@@ -68,10 +89,10 @@ msgid "'Handle standby from TV' has a higher priority as 'Handle input from TV'"
 msgstr "'TV-Standby verwalten' besitzt eine höhere Priorität als 'TV-Eingänge verwalten'"
 
 msgid "Slowing down for the send interval"
-msgstr "Verlangsamung das Sendeintervalls"
+msgstr "Verlangsamung des Sendeintervalles"
 
 msgid "Repeat the standby commands?"
-msgstr "Auch die Standby Kommandos wiederholen?"
+msgstr "Auch die Standby-Kommandos wiederholen?"
 
 msgid "Is not necessary in most cases."
 msgstr "Ist in den meisten Fällen nicht erforderlich."
@@ -93,6 +114,9 @@ msgstr "REC Zeichen"
 
 msgid "Blinking REC Symbol"
 msgstr "Blinkendes REC Zeichen"
+
+msgid "Blinking REC"
+msgstr "Blinkendes REC"
 
 msgid "Channelname"
 msgstr "Kanalname"
@@ -791,7 +815,7 @@ msgstr "AB"
 
 #
 msgid "PCM Multichannel"
-msgstr "PCM-Multikanal"
+msgstr "PCM-Mehrkanal"
 
 #
 msgid "AC3 downmix"
@@ -799,11 +823,11 @@ msgstr "AC3-Downmix"
 
 #
 msgid "AC3 plus transcoding"
-msgstr "AC3-Plus Transcoding"
+msgstr "AC3+-Transkoding"
 
 #
 msgid "AC3plus transcoding"
-msgstr "AC3-Plus Transcoding"
+msgstr "AC3+-Transkoding"
 
 #
 msgid "AAC downmix"
@@ -811,15 +835,15 @@ msgstr "AAC-Downmix"
 
 #
 msgid "AAC plus downmix"
-msgstr "AAC-Plus Downmix"
+msgstr "AAC+-Downmix"
 
 #
 msgid "AAC Plus downmix"
-msgstr "AAC-Plus Downmix"
+msgstr "AAC+-Downmix"
 
 #
 msgid "AAC transcoding"
-msgstr "AAC Transcoding"
+msgstr "AAC-Transkoding"
 
 #
 msgid "DTS downmix"
@@ -827,7 +851,7 @@ msgstr "DTS-Downmix"
 
 #
 msgid "DTS HD downmix"
-msgstr "DTS-HD Downmix"
+msgstr "DTS-HD-Downmix"
 
 msgid "AFP Setup"
 msgstr "AFP-Dateiserver"
@@ -837,7 +861,7 @@ msgstr "AFP-Einstellungen"
 
 #, python-format
 msgid "AV aspect is %s."
-msgstr "AV Aspect ist %s."
+msgstr "AV-Seitenverhältnis ist %s."
 
 msgid "SABnzbd Setup"
 msgstr "SABnzbd (Binary News)"
@@ -1929,13 +1953,13 @@ msgid "Choose whether multi channel sound tracks should be output as PCM."
 msgstr "Wählen Sie, ob Mehrkanalton als PCM ausgegeben werden soll"
 
 msgid "Configure whether multi channel sound tracks should be downmixed to stereo."
-msgstr "Heruntermischen von Multi-Kanal-Sound in Stereo."
+msgstr "Heruntermischen von Mehrkanalton zu Stereo."
 
 msgid "Choose whether multi channel sound tracks should be downmixed to stereo."
 msgstr "Wählen Sie, ob Mehrkanalton zu Stereo heruntergerechnet werden soll."
 
 msgid "Choose whether AC3 sound tracks should be downmixed to stereo."
-msgstr "Wählen Sie, ob AC3-Tonspuren ( Dolby Digital ) zu Stereo heruntergerechnet werden soll."
+msgstr "Wählen Sie, ob AC3-Tonspuren (Dolby Digital) zu Stereo heruntergerechnet werden soll."
 
 msgid "Choose whether DTS channel sound tracks should be downmixed to stereo."
 msgstr "Wählen Sie, ob DTS-Tonspuren zu Stereo heruntergerechnet werden soll."
@@ -1944,13 +1968,13 @@ msgid "Choose whether DTS channel sound tracks should be downmixed or transcoded
 msgstr "Wählen Sie, ob DTS-Tonspuren zu Stereo heruntergerechnet werden soll oder transkodiert."
 
 msgid "Choose whether WMA Pro channel sound tracks should be downmixed or transcoded."
-msgstr "Wählen Sie, ob WMA Pro Tonspuren zu Stereo heruntergerechnet werden soll oder transkodiert."
+msgstr "Wählen Sie, ob WMA-Pro-Tonspuren zu Stereo heruntergerechnet werden soll oder transkodiert."
 
 msgid "Choose whether AAC sound tracks should be transcoded."
 msgstr "Wählen Sie, ob AAC-Tonspuren transkodiert werden sollen."
 
 msgid "Choose whether AC3 Plus sound tracks should be transcoded to AC3."
-msgstr "Wählen Sie, ob AC3-Plus Tonspuren transkodiert werden sollen nach AC3"
+msgstr "Wählen Sie, ob AC3+-Tonspuren transkodiert werden sollen nach AC3"
 
 msgid "Choose whether or not to show an icon when a motorized dish is moving."
 msgstr "Anzeige eines Icons bei Rotorbewegung."
@@ -3612,6 +3636,10 @@ msgstr ""
 "© 2006 - Stephan Reichholf"
 
 #
+msgid "Please open Picture in Picture first"
+msgstr "Bitte erst Bild-in-Bild aktivieren (PIP-Zap)"
+
+#
 msgid "Enter main menu..."
 msgstr "Hauptmenü öffnen..."
 
@@ -4414,7 +4442,7 @@ msgid "If set to 'yes' the infobar will be displayed when changing channels."
 msgstr "Wenn 'Ja' eingestellt ist, wird die Infobar angezeigt, wenn der Sender gewechselt wird."
 
 msgid "When enabled, the receiver will select an AC3 track (when available)."
-msgstr "Wenn auf 'Ja' gestellt, wird die %s %s AC3 Ton benutzen (wenn verfügbar)."
+msgstr "Wenn auf 'Ja' gestellt, wird die %s %s AC3-Ton benutzen (wenn verfügbar)."
 
 msgid "When enabled, the receiver will automatically use the audio track which you selected before."
 msgstr "Wenn auf 'Ja' gestellt, wird die %s %s die Tonspur benutzen die zuvor ausgewählt wurde."
@@ -12683,18 +12711,18 @@ msgstr "Seitenverhältnis"
 #
 msgid ""
 "HDD = Do you want to make an USB-back-up image on HDD? \n"
-"This only takes 2 or 10 minutes and is fully automatic."
+"This only takes 1 or 10 minutes and is fully automatic."
 msgstr ""
 "HDD = Wollen Sie ein Backup auf der HDD erstellen? \n"
-"Das dauert 2 - 10 Minuten und geht vollautomatisch."
+"Das dauert 1 - 10 Minuten und geht vollautomatisch."
 
 msgid ""
 "USB = Do you want to make a back-up on USB?\n"
-"This will take between 4 and 15 minutes depending on the used filesystem and is fully automatic.\n"
+"This will take between 3 and 15 minutes depending on the used filesystem and is fully automatic.\n"
 "Make sure you first insert an USB flash drive before you select USB."
 msgstr ""
 "USB = Wollen Sie ein Backup auf USB erstellen? \n"
-"Das dauert 4 - 15 Minuten und geht vollautomatisch.\n"
+"Das dauert 3 - 15 Minuten und geht vollautomatisch.\n"
 "\n"
 "------------------------  WICHTIG !!!  ------------------------\n"
 "Stellen Sie sicher, dass ein USB Stick angeschlossen ist bevor Sie USB auswählen.\n"
@@ -12775,16 +12803,8 @@ msgid "will take about 30 minutes for this system\n"
 msgstr "ca. 30 Minuten\n"
 
 #
-msgid "will take about 3-12 minutes for this system\n"
-msgstr "zwischen 3-12 Minuten\n"
-
-#
-msgid "will take about 1-4 minutes for this system\n"
-msgstr "zwischen 1-4 Minuten\n"
-
-#
-msgid "this will take between 2 and 9 minutes\n"
-msgstr "zwischen 2-9 Minuten\n"
+msgid "will take about 1-15 minutes for this system\n"
+msgstr "zwischen 1-15 Minuten\n"
 
 #
 msgid "Kernel dump error\n"
@@ -15314,6 +15334,10 @@ msgid "Enable blinking rec symbol on the LCD Display"
 msgstr "Hier können Sie das blinkende Record-Symbol in dem Display aktivieren."
 
 #: setup.xml
+msgid "In the Standby Record on the LCD Display"
+msgstr "Display bei Aufnahmen im Standby"
+
+#: setup.xml
 msgid "Screenshot of LCD in /tmp"
 msgstr "LCD Screenshot in /tmp erstellen"
 
@@ -16323,7 +16347,7 @@ msgstr ""
 
 #: automatic audio selection
 msgid "When enabled, the receiver will select an AC3+ track (when available)."
-msgstr "Wenn auf 'Ja' gestellt, wird die %s %s AC3+ Ton benutzen (wenn verfügbar)."
+msgstr "Wenn auf 'Ja' gestellt, wird die %s %s AC3+-Ton benutzen (wenn verfügbar)."
 
 #: channellist
 msgid "Configure if and how crypto icons will be shown in the channel selection list."
@@ -18529,10 +18553,10 @@ msgid "use best / controlled by HDMI"
 msgstr "Best Mögliches / Steuerung über HDMI"
 
 msgid "convert to AC3"
-msgstr "Konvertieren zu AC3"
+msgstr "Umwandeln zu AC3"
 
 msgid "force AC3plus"
-msgstr "Erzwinge AC3 Plus"
+msgstr "Erzwinge AC3+"
 
 msgid "convert to DTS"
 msgstr "Konvertieren zu DTS"
@@ -19870,3 +19894,107 @@ msgstr "Zur vorherigen Seite springen oder alle runter (Einstellung im Menü)"
 #: python\Screens\EpgSelection
 msgid "Show detailed event info (setup in menu)"
 msgstr "Zeige detaillierte Ereignisinformationen (Einstellung im Menü)"
+
+#: python\Plugins\Extensions\QuadPip
+msgid "Enable Quad PIP"
+msgstr "Aktiviere Quad-PIP"
+
+#: python\Plugins\Extensions\QuadPip
+msgid "Input channel name."
+msgstr "Gebe einen Sendergruppennamen ein:"
+
+#: python\Plugins\Extensions\QuadPip
+msgid "EPG key : Switch to quad PiP entry\nOk key : Add to new entry\nPVR key : Input channel name\nExit key : Finish channel edit"
+msgstr "EPG: Wechsel zum Quad-PiP-Eintrag\nOK: Füge Sender hinzu\nPVR: Ändere Sendergruppennamen\nExit: Beenden"
+
+#: python\Plugins\Extensions\QuadPip
+msgid "EPG key : Switch to channel list\nOk key : Remove selected channel\nPVR key : Input channel name\nExit key : Finish channel edit"
+msgstr "EPG: Wechsel zur Senderauswahl\n OK: Ausgewählten Sender entfernen\nPVR: Ändere Sendergruppennamen\nExit: Beenden"
+
+#: python\Plugins\Extensions\QuadPip
+msgid "Quad PiP Channel Selection"
+msgstr "Quad-PiP-Kanalauswahl"
+
+#: python\Plugins\Extensions\QuadPip
+msgid "Select Quad Channels"
+msgstr "Sendergruppe auswählen"
+
+#: python\Plugins\Extensions\QuadPip
+msgid "Add New Quad Channel Entry"
+msgstr "Neue Sendergruppe hinzufügen"
+
+#: python\Plugins\Extensions\QuadPip
+msgid "Remove Quad Channel Entry"
+msgstr "Entferne Sendergruppe"
+
+#: python\Plugins\Extensions\QuadPip
+msgid "Edit Quad Channel Entry"
+msgstr "Bearbeite Sendergruppe"
+
+#: python\Plugins\Extensions\QuadPip
+msgid "Exit Quad Channel Selection"
+msgstr "Beende Quad-PiP-Kanalauswahl"
+
+#: python\Plugins\Extensions\QuadPip
+msgid "Exit quad PiP"
+msgstr "Beende Quad-PiP"
+
+#: python\Plugins\Extensions\QuadPip
+msgid "Zap focused channel on full screen"
+msgstr "Schalte im Vollbildmodus auf den ausgewählten Sender"
+
+#: python\Plugins\Extensions\QuadPip
+msgid "Select channel audio"
+msgstr "Kanalauswahl für die Tonausgabe"
+
+#: python\Plugins\Extensions\QuadPip
+msgid "Show channel selection"
+msgstr "Zeige die Sendergruppen"
+
+#: python\Plugins\Extensions\QuadPip
+msgid "Prev quad PiP channel"
+msgstr "Auf die vorherige Sendergruppe schalten"
+
+#: python\Plugins\Extensions\QuadPip
+msgid "Next quad PiP channel"
+msgstr "Auf die nächste Sendergruppe schalten"
+
+#: python\Plugins\Extensions\QuadPip
+msgid "Show/Hide focus bar"
+msgstr "Zeige/verstecke den Fokusrahmen"
+
+#: python\Plugins\Extensions\QuadPip
+msgid "  Red key : Show/Hide channel name"
+msgstr "  Rot: Zeige/verstecke Sendernamen"
+
+#: python\Plugins\Extensions\QuadPip
+msgid "  Menu key : Select quad channel"
+msgstr "  Menü: Wähle Sendergruppe"
+
+#: python\Plugins\Extensions\QuadPip
+msgid " <No Channel>"
+msgstr " <Kein Kanal>"
+
+#: python\Plugins\Extensions\QuadPip
+msgid "No channel"
+msgstr "Kein Kanal"
+
+#: python\Plugins\Extensions\QuadPip
+msgid " <empty>"
+msgstr " <leer>"
+
+#: python\Plugins\Extensions\QuadPip
+msgid " (current channel)"
+msgstr " (Aktuelle Sendergruppe)"
+
+#: python\Plugins\Extensions\QuadPip
+msgid "Choice where to put \"%s\""
+msgstr "Positionsauswahl für \"%s\""
+
+#: python\Plugins\Extensions\QuadPip
+msgid "Really delete this entry?"
+msgstr "Sendergruppe wirklich löschen?"
+
+#: python\Plugins\SystemPlugins\VideoTune
+msgid "VideoFinetune"
+msgstr "Bild Feinabstimmung"
