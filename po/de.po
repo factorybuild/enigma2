@@ -41,7 +41,7 @@ msgid "Routing request"
 msgstr "Routinganfrage"
 
 msgid "TV physical address report"
-msgstr "TV Addressbericht"
+msgstr "TV Adressbericht"
 
 msgid "An attempt is made to capture the current TV status. If this is not possible due to incorrect or missing status messages, it may cause the receiver to respond unexpectedly.\nOn the other hand, tries to respond better to different operating conditions."
 msgstr "Es wird versucht den aktuellen TV Betriebszustand zu erfassen. Ist dies aufgrund falscher oder fehlender Statusmeldungen nicht möglich, kann der Receiver unerwartet reagieren.\nAndererseits wird versucht auf verschiedene Betriebszustände besser zu reagieren."
@@ -142,8 +142,16 @@ msgstr "Videomodus: 1080p nicht verfügbar"
 msgid "Video mode: %s"
 msgstr "Videomodus: %s"
 
+#: \python\Components\UsageConfig.py
 msgid "Eventname only"
-msgstr "nur Sendungsname"
+msgstr "Nur Sendungsname"
+
+#: \python\Components\UsageConfig.py
+#, python-format
+msgid "%d pixel wide"
+msgid_plural "%d pixels wide"
+msgstr[0] "%d Pixelbreit"
+msgstr[1] "%d Pixelbreite"
 
 msgid ""
 "\n"
@@ -1166,6 +1174,9 @@ msgstr "Crashlog anonymisieren?"
 
 msgid "Any activity"
 msgstr "Jede Aktivität"
+
+msgid "Undetermined"
+msgstr "Unbestimmt"
 
 msgid "Arabic"
 msgstr "Arabisch"
@@ -11704,7 +11715,7 @@ msgstr "Multinorm"
 
 #: ParentalControl.py
 msgid "never"
-msgstr "niemals"
+msgstr "Niemals"
 
 #: ParentalControl.py
 msgid "5 minutes"
@@ -13622,16 +13633,16 @@ msgid "Use HDMI-preemphasis"
 msgstr "HDMI-Preemphasis benutzen"
 
 msgid "center"
-msgstr "zentriert"
+msgstr "Zentriert"
 
 msgid "Use DVB subtitles position"
 msgstr "DVB Untertitel Position"
 
 msgid "Fixed"
-msgstr "fixiert"
+msgstr "Fixiert"
 
 msgid "Relative"
-msgstr "relativ"
+msgstr "Relativ"
 
 msgid "DVD-Player Setup"
 msgstr "DVD-Player"
@@ -13655,10 +13666,10 @@ msgid "Recording type"
 msgstr "Aufnahmeart"
 
 msgid "descramble and record ecm"
-msgstr "entschlüsseln und ECM aufnehmen"
+msgstr "Entschlüsseln und ECM aufnehmen"
 
 msgid "don't descramble, record ecm"
-msgstr "nicht entschlüsseln, ECM aufnehmen"
+msgstr "Nicht entschlüsseln, ECM aufnehmen"
 
 msgid "The user interface of your %s %s is restarting"
 msgstr "Die Bedienoberfläche Ihrer %s %s wird neu gestartet"
@@ -14764,11 +14775,11 @@ msgstr "Wenn aktiviert, wird der Movieplayer mit Exit beendet."
 
 #
 msgid "With popup"
-msgstr "mit Meldung"
+msgstr "Mit Meldung"
 
 #
 msgid "Without popup"
-msgstr "ohne Meldung"
+msgstr "Ohne Meldung"
 
 #
 msgid "Configure the behavior when reaching the end of a movie, during movie playback."
@@ -15477,7 +15488,7 @@ msgid "Default recording type"
 msgstr "Standard-Aufnahmetyp"
 
 msgid "Descramble & record ECM' gives the option to descramble afterwards if descrambling on recording failed. 'Don't descramble, record ECM' save a scramble recording that can be descrambled on playback. 'Normal' means descramble the recording and don't record ECM."
-msgstr "'entschlüsseln und ECM aufnehmen' ermöglicht es Ihnen die Aufnahme beim Abspielen zu entschlüsseln, wenn bei der Aufnahme die Entschlüsselung fehlschlägt. 'nicht entschlüsseln, ECM aufnehmen' speichert eine verschlüsselte Aufnahme, die beim Abspielen entschlüsselt werden kann. 'normal' entschlüsselt die Aufnahme ohne ECM's aufzunehmen."
+msgstr "'Entschlüsseln und ECM aufnehmen' ermöglicht es Ihnen die Aufnahme beim Abspielen zu entschlüsseln, wenn bei der Aufnahme die Entschlüsselung fehlschlägt. 'Nicht entschlüsseln, ECM aufnehmen' speichert eine verschlüsselte Aufnahme, die beim Abspielen entschlüsselt werden kann. 'Normal' entschlüsselt die Aufnahme ohne ECM's aufzunehmen."
 
 msgid "Show warning when timeshift is stopped"
 msgstr "Zeige Warnung wenn Timeshift gestoppt wird"
@@ -16015,10 +16026,10 @@ msgid "Set the delay time between repeated loops, this is used by software rende
 msgstr "Setzen Sie die Verzögerungszeit zwischen Scrolldurchläufen. Wird vom Software-Renderer in einigen Skins genutzt."
 
 msgid "fast"
-msgstr "schnell"
+msgstr "Schnell"
 
 msgid "slow"
-msgstr "langsam"
+msgstr "Langsam"
 
 # python\Screens\LanguageSelection.py
 msgid "Do you want to delete all other languages?"
@@ -17261,7 +17272,7 @@ msgstr "Wenn Sie diese Option aktivieren, werden alle vorhandenen Favoritenliste
 
 # Record neu 5.1
 msgid "never abort"
-msgstr "nie abbrechen"
+msgstr "Nie abbrechen"
 
 # Record neu 5.1
 msgid "ask user"
@@ -17269,11 +17280,11 @@ msgstr "Benutzer fragen"
 
 # Record neu 5.1
 msgid "just abort, no message"
-msgstr "abbrechen, ohne Hinweis"
+msgstr "Abbrechen, ohne Hinweis"
 
 # Record neu 5.1
 msgid "just abort, show message"
-msgstr "abbrechen, zeige Hinweis"
+msgstr "Abbrechen, zeige Hinweis"
 
 # Record neu 5.1
 msgid "Recordings abort pseudo recordings"
@@ -17309,19 +17320,19 @@ msgstr "Legt fest, ob beim Neustart eine Warnung wegen laufender Aufnahmen nur b
 
 # Record neu 5.1
 msgid "any recordings"
-msgstr "alle Aufnahmen"
+msgstr "Alle Aufnahmen"
 
 # Record neu 5.1
 msgid "real recordings"
-msgstr "echte Aufnahmen"
+msgstr "Echte Aufnahmen"
 
 # Record neu 5.1
 msgid "real recordings or streaming"
-msgstr "echte Aufnahmen / Streaming"
+msgstr "Echte Aufnahmen / Streaming"
 
 # Record neu 5.1
 msgid "real or pseudo recordings"
-msgstr "echte/Pseudo-Aufnahmen"
+msgstr "Echte / Pseudo-Aufnahmen"
 
 # Display neu 5.1
 msgid "Initial scroll delay"
@@ -17697,7 +17708,7 @@ msgstr "Sind Sie sicher, alle gelöschten Userbouquets zu entfernen?"
 
 #: TimerEntry.py
 msgid "normal"
-msgstr "normal"
+msgstr "Normal"
 
 #: TimerEntry.py
 msgid "%d %B %Y"
@@ -18273,16 +18284,16 @@ msgid "Force Legacy Signal Stats"
 msgstr "Erzwinge ursprünglichen Signalstatus"
 
 msgid "reliable"
-msgstr "zuverlässig"
+msgstr "Zuverlässig"
 
 msgid "traditional (fast)"
-msgstr "klassisch (schnell)"
+msgstr "Klassisch (schnell)"
 
 msgid "reliable, retune"
-msgstr "zuverlässig, retune"
+msgstr "Zuverlässig, retune"
 
 msgid "traditional (fast), retune"
-msgstr "klassisch (schnell), retune"
+msgstr "Klassisch (schnell), retune"
 
 msgid "This allows you to show drivers modules in downloads"
 msgstr "Dies erlaubt Ihnen die Anzeige von Treibern im Downloadbereich"
