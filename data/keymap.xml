@@ -69,6 +69,66 @@
 		<key id="KEY_VIDEO" mapto="file" flags="m" />
 	</map>
 
+	<map context="VirtualKeyBoardActions">
+		<key id="KEY_RED" mapto="cancel" flags="m" />
+		<key id="KEY_GREEN" mapto="save" flags="m" />
+		<key id="KEY_YELLOW" mapto="shift" flags="m" />
+		<key id="KEY_BLUE" mapto="capsLock" flags="m" />
+		<key id="KEY_EXIT" mapto="cancel" flags="m" />
+		<key id="KEY_OK" mapto="select" flags="m" />
+		<key id="KEY_TEXT" mapto="locale" flags="m" />
+		<key id="KEY_UP" mapto="up" flags="mr" />
+		<key id="KEY_PREVIOUS" mapto="first" flags="m" />
+		<key id="KEY_REWIND" mapto="prev" flags="mr" />
+		<key id="KEY_LEFT" mapto="left" flags="mr" />
+		<key id="KEY_RIGHT" mapto="right" flags="mr" />
+		<key id="KEY_FASTFORWARD" mapto="next" flags="mr" />
+		<key id="KEY_NEXT" mapto="last" flags="m" />
+		<key id="KEY_DOWN" mapto="down" flags="mr" />
+		<key id="KEY_LAST" mapto="backspace" flags="mr" />
+		<key id="KEY_STOP" mapto="backspace" flags="mr" />
+		<key id="KEY_PLAYPAUSE" mapto="delete" flags="mr" />
+		<key id="KEY_PLAY" mapto="delete" flags="mr" />
+		<key id="KEY_INFO" mapto="toggleOverwrite" flags="m" />
+		<key id="KEY_0" mapto="0" flags="m" />
+		<key id="KEY_1" mapto="1" flags="m" />
+		<key id="KEY_2" mapto="2" flags="m" />
+		<key id="KEY_3" mapto="3" flags="m" />
+		<key id="KEY_4" mapto="4" flags="m" />
+		<key id="KEY_5" mapto="5" flags="m" />
+		<key id="KEY_6" mapto="6" flags="m" />
+		<key id="KEY_7" mapto="7" flags="m" />
+		<key id="KEY_8" mapto="8" flags="m" />
+		<key id="KEY_9" mapto="9" flags="m" />
+		<!-- Keyboard specific buttons -->
+		<key id="KEY_F1" mapto="cancel" flags="m" />
+		<key id="KEY_F2" mapto="save" flags="m" />
+		<key id="KEY_F3" mapto="locale" flags="m" />
+		<key id="KEY_F4" mapto="shift" flags="m" />
+		<key id="KEY_ESC" mapto="cancel" flags="m" />
+		<key id="KEY_ENTER" mapto="select" flags="m" />
+		<key id="KEY_PREVIOUSSONG" mapto="first" flags="m" />
+		<key id="KEY_F9" mapto="first" flags="m" />
+		<key id="KEY_F11" mapto="prev" flags="m" />
+		<key id="KEY_F12" mapto="next" flags="m" />
+		<key id="KEY_NEXTSONG" mapto="last" flags="m" />
+		<key id="KEY_F10" mapto="last" flags="m" />
+		<key id="KEY_BACKSPACE" mapto="backspace" flags="mr" />
+		<key id="KEY_DELETE" mapto="delete" flags="mr" />
+		<key id="KEY_INSERT" mapto="toggleOverwrite" flags="m" />
+		<key id="KEY_ASCII" mapto="gotAsciiCode" flags="mr" />
+		<key id="KEY_KP0" mapto="0" flags="m" />
+		<key id="KEY_KP1" mapto="1" flags="m" />
+		<key id="KEY_KP2" mapto="2" flags="m" />
+		<key id="KEY_KP3" mapto="3" flags="m" />
+		<key id="KEY_KP4" mapto="4" flags="m" />
+		<key id="KEY_KP5" mapto="5" flags="m" />
+		<key id="KEY_KP6" mapto="6" flags="m" />
+		<key id="KEY_KP7" mapto="7" flags="m" />
+		<key id="KEY_KP8" mapto="8" flags="m" />
+		<key id="KEY_KP9" mapto="9" flags="m" />
+	</map>
+
 	<map context="InputActions">
 		<key id="KEY_LEFT" mapto="left" flags="mr" />
 		<key id="KEY_RIGHT" mapto="right" flags="mr" />
@@ -118,6 +178,7 @@
 		<key id="KEY_F4" mapto="extensions" flags="b" />
 		<key id="KEY_BLUE" mapto="extensions" flags="l" />
 		<key id="KEY_BLUE" mapto="quickmenu" flags="b" />
+		<key id="KEY_MOUSE" mapto="extensions" flags="b" />
 	</map>
 
 	<map context="InfoBarQuickMenu">
@@ -234,6 +295,7 @@
 		<key id="KEY_RADIO" mapto="showRadio" flags="b" />
 		<key id="KEY_HOMEPAGE" mapto="showWWW" flags="b" />
 		<key id="KEY_BOOKMARKS" mapto="showWWW" flags="b" />
+		<key id="KEY_VOD" mapto="showWWW" flags="b" />
 		<key id="KEY_RADIO" mapto="openBouquetList" flags="l" />
 		<key id="KEY_TV" mapto="showTv" flags="b" />
 		<key id="KEY_TV" mapto="openBouquetList" flags="l" />
@@ -248,6 +310,7 @@
 		<key id="KEY_TIME" mapto="openTimerList" flags="b" />
 		<key id="KEY_PROGRAM" mapto="openAutoTimerList" flags="l" />
 		<key id="KEY_CALENDAR" mapto="openAutoTimerList" flags="b" />
+		<key id="KEY_EJECTCD" mapto="openSimpleUnmount" flags="b" />
 		<key id="KEY_SEARCH" mapto="openEPGSearch" flags="b" />
 		<key id="KEY_SEARCH" mapto="openIMDB" flags="l" />
 		<key id="KEY_SLEEP" mapto="openSleepTimer" flags="b" />
@@ -300,6 +363,7 @@
 
 	<map context="InfobarVmodeButtonActions">
 			<key id="KEY_VMODE" mapto="vmodeSelection" flags="m" />
+			<key id="KEY_ANGLE" mapto="vmodeSelection" flags="m" />
 	</map>
 
 	<map context="InfobarPiPActions">
@@ -1065,6 +1129,12 @@
 		<key id="KEY_AUX" mapto="HDMIin_long" flags="l"/>
 		<key id="KEY_ZOOM" mapto="zoom" flags="b"/>
 		<key id="KEY_ZOOM" mapto="zoom_long" flags="l"/>
+		<key id="KEY_EJECTCD" mapto="ejectcd" flags="b"/>
+		<key id="KEY_EJECTCD" mapto="ejectcd_long" flags="l"/>
+		<key id="KEY_MOUSE" mapto="mouse" flags="b"/>
+		<key id="KEY_MOUSE" mapto="mouse_long" flags="l"/>
+		<key id="KEY_VOD" mapto="vod" flags="b"/>
+		<key id="KEY_VOD" mapto="vod_long" flags="l"/>
 	</map>
 	<map context="SubtitlesActions">
 		<key id="KEY_SUBTITLE" mapto="subtitles" flags="m" />

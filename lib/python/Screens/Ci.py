@@ -18,7 +18,10 @@ from Tools.BoundFunction import boundFunction
 from boxbranding import getBrandOEM, getBoxType
 import time
 
-MAX_NUM_CI = 4
+if getBoxType() in ('zgemmah9combo',):
+	MAX_NUM_CI = 1
+else:
+	MAX_NUM_CI = 4
 relevantPidsRoutingChoices = None
 
 def setCIBitrate(configElement):
@@ -88,7 +91,7 @@ class CISetup(Screen, ConfigListScreen):
 	def __init__(self, session):
 		Screen.__init__(self, session)
 		self.skinName = ["Setup" ]
-		self.setup_title = _("CI settings")
+		self.setup_title = _("CI Basic settings")
 		self["HelpWindow"] = Pixmap()
 		self["HelpWindow"].hide()
 		self["VKeyIcon"] = Boolean(False)
@@ -408,7 +411,7 @@ class CiMessageHandler:
 		self.dlgs = { }
 		self.auto_close = False
 		eDVBCI_UI.getInstance().ciStateChanged.get().append(self.ciStateChanged)
-		if getBoxType() in ('vuzero'):
+		if getBoxType() in ('vuzero',):
 			SystemInfo["CommonInterface"] = False
 		else:
 			SystemInfo["CommonInterface"] = eDVBCIInterfaces.getInstance().getNumOfSlots() > 0

@@ -8,7 +8,7 @@ from Components.SystemInfo import SystemInfo
 from Components.Harddisk import harddiskmanager
 from GlobalActions import globalActionMap
 from enigma import eDVBVolumecontrol, eTimer, eDVBLocalTimeHandler, eServiceReference
-from boxbranding import getMachineBrand, getMachineName, getBoxType, getBrandOEM
+from boxbranding import getMachineBrand, getMachineName, getBoxType, getBrandOEM, getMachineBuild
 from Tools import Notifications
 from time import localtime, time
 import Screens.InfoBar
@@ -90,11 +90,12 @@ def setLCDModeMinitTV(value):
 class Standby2(Screen):
 	def Power(self):
 		print "[Standby] leave standby"
+		SystemInfo["StandbyState"] = False
 
 		if os.path.exists("/usr/script/StandbyLeave.sh"):
 			Console().ePopen("/usr/script/StandbyLeave.sh &")
 
-		if (getBrandOEM() in ('fulan','clap','dinobot') or getBoxType() in ('sf8008','ustym4kpro')):
+		if (getBrandOEM() in ('fulan','clap','dinobot') or getMachineBuild() in ('gbmv200','sf8008','ustym4kpro','beyonwizv2','viper4k')):
 			try:
 				open("/proc/stb/hdmi/output", "w").write("on")
 			except:
@@ -153,6 +154,7 @@ class Standby2(Screen):
 		self.avswitch = AVSwitch()
 
 		print "[Standby] enter standby"
+		SystemInfo["StandbyState"] = True
 
 		if os.path.exists("/usr/script/StandbyEnter.sh"):
 			Console().ePopen("/usr/script/StandbyEnter.sh &")
@@ -210,7 +212,7 @@ class Standby2(Screen):
 			self.avswitch.setInput("SCART")
 		else:
 			self.avswitch.setInput("AUX")
-		if (getBrandOEM() in ('fulan','clap','dinobot') or getBoxType() in ('sf8008','ustym4kpro')):
+		if (getBrandOEM() in ('fulan','clap','dinobot') or getMachineBuild() in ('gbmv200','sf8008','ustym4kpro','beyonwizv2','viper4k')):
 			try:
 				open("/proc/stb/hdmi/output", "w").write("off")
 			except:

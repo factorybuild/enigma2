@@ -76,10 +76,10 @@
 			<item weight="15" level="0" entryID="usage_setup"><setup id="usage" /></item>
 			<!--item weight="20" level="0" entryID="specialfeatures_menu"><setup id="specialfeatures" /></item-->
 			<item weight="25" level="0" text="Skin Setup" entryID="skin_setup"><screen module="SkinSelector" screen="SkinSelector"/></item>
-			<menu weight="30" level="0" text="Display" entryID="display_selection" requires="Display">
+			<menu weight="30" level="0" text="STB Display" entryID="display_selection" requires="Display">
 				<id val="display" />
 				<item weight="0" level="0" entryID="display_setup"><setup id="display" /></item>
-				<item weight="5" level="0" text="Skin setup" entryID="lcd_skin_setup" requires="LCDSKINSetup"><screen module="SkinSelector" screen="LcdSkinSelector"/></item>
+				<item weight="5" level="0" text="LCD Skin Setup" entryID="lcd_skin_setup" requires="LCDSKINSetup"><screen module="SkinSelector" screen="LcdSkinSelector"/></item>
 			</menu>
 			<item weight="35" level="2" text="Hotkey Setup" entryID="buttonsetup_setup"><screen module="ButtonSetup" screen="ButtonSetup"/></item>
 			<!-- Menu / Settings / System / Extended System / OSD settings -->
@@ -153,7 +153,7 @@ self.session.openWithCallback(msgClosed, EpgDeleteMsg)
 		</menu>
 
 		<!-- Menu / Settings / Service Searching -->
-		<menu weight="25" level="0" text="Service searching" entryID="service_searching_selection">
+		<menu weight="25" level="0" text="Reception" entryID="service_searching_selection">
 			<id val="scan" />
 			<item weight="0" level="1" text="Basic settings" requires="USETunersetup" entryID="tuner_setup"><screen module="Satconfig" screen="TunerSetup" /></item>
 			<item weight="1" level="0" text="Tuner configuration" entryID="tuner_setup"><screen module="Satconfig" screen="NimSelection" /></item>
@@ -162,14 +162,15 @@ self.session.openWithCallback(msgClosed, EpgDeleteMsg)
 		</menu>
 
 		<!-- Menu / Settings / Common interface -->
-		<menu weight="30" level="1" text="Common interface" entryID="cam_setup" requires="CommonInterface">
+		<menu weight="30" level="1" text="Decryption &amp; Parental Control" entryID="cam_setup">
 			<id val="cam" />
-			<item weight="0" level="1" text="Basic settings" entryID="ci_setup"><screen module="Ci" screen="CISetup" /></item>
-			<item weight="1" level="1" text="Common Interface" entryID="ci_setup"><screen module="Ci" screen="CiSelection" /></item>
-			<item weight="5" level="1" text="CIHelper Setup" entryID="ci_setup" requires="CIHelper"><screen module="Ci" screen="CIHelper" /></item>
+			<item weight="50" level="0" text="Softcam Setup" entryID="softcam_setup" requires="HAVEINITCAM"><screen module="SoftcamSetup" screen="SoftcamSetup"/></item>
+			<item weight="80" level="1" text="CI Basic settings" entryID="ci_setup" requires="CommonInterface"><screen module="Ci" screen="CISetup" /></item>
+			<item weight="90" level="1" text="CIHelper Setup" entryID="ci_setup" requires="CIHelper"><screen module="Ci" screen="CIHelper" /></item>
+			<item weight="100" level="1" text="Common Interface" entryID="ci_setup" requires="CommonInterface"><screen module="Ci" screen="CiSelection" /></item>
+			<item weight="200" level="0" text="Parental control" entryID="parental_setup"><screen module="ParentalControlSetup" screen="ParentalControlSetup" /></item>
 		</menu>
 
-		<item weight="35" level="0" text="Parental control" entryID="parental_setup"><screen module="ParentalControlSetup" screen="ParentalControlSetup" /></item>
 
 
 		<!-- Menu / Settings / System -->
@@ -224,9 +225,6 @@ def msgClosed(ret):
 		print"[FACTORY RESET] set network to DHCP"
 		system("cp -f /usr/share/enigma2/defaults/interfaces /etc/network/interfaces")
 		system("/etc/init.d/networking restart")
-		if path.exists("/etc/defaultsat.tar.gz"):
-			system("mkdir /etc/enigma2")
-			system("tar -xzf /etc/defaultsat.tar.gz -C /etc/enigma2")
 		_exit(0)
 self.session.openWithCallback(msgClosed, FactoryReset)
 </code>
@@ -249,12 +247,8 @@ else:
 </code>
 		</item>
 		<item weight="5" level="0" text="Shutdown" requires="!DeepstandbySupport" entryID="deep_standby"><screen module="Standby" screen="TryQuitMainloop">1</screen></item>
-		<item weight="6" level="0" text="MultiBoot" requires="HaveMultiBootHD" entryID="deep_standby"><screen module="MultiBootStartup" screen="MultiBootStartup" /></item>
-		<item weight="6" level="0" text="MultiBoot" requires="HaveMultiBootXC" entryID="deep_standby"><screen module="MultiBootStartupXC" screen="MultiBootStartup" /></item>
-		<item weight="6" level="0" text="MultiBoot" requires="HaveMultiBootGB" entryID="deep_standby"><screen module="MultiBootStartupGB" screen="MultiBootStartup" /></item>
-		<item weight="6" level="0" text="MultiBoot" requires="HaveMultiBootCY" entryID="deep_standby"><screen module="MultiBootStartupCY" screen="MultiBootStartup" /></item>
-		<item weight="6" level="0" text="MultiBoot" requires="HaveMultiBootDS" entryID="deep_standby"><screen module="MultiBootStartupDS" screen="MultiBootStartup" /></item>
-		<item weight="6" level="0" text="MultiBoot" requires="HaveMultiBootOS" entryID="deep_standby"><screen module="MultiBootStartupOS" screen="MultiBootStartup" /></item>
+		<item weight="6" level="0" text="Multiboot Image Selector" entryID="restart" requires="canMultiBoot"><screen module="MultiBootSelector" screen="MultiBootSelector">1</screen></item>
+		<!--item weight="7" level="0" text="SDroot" entryID="SDswap" requires="HasSDswap"><screen module="SDswap" screen="SDswap">1</screen></item-->
 		<item weight="10" level="0" text="WOL Standby" requires="GBWOL" entryID="deep_standby">
 			<code>
 from Screens.Standby import TryQuitMainloop

@@ -25,7 +25,7 @@ has_rca = SystemInfo["HaveRCA"]
 has_avjack = SystemInfo["HaveAVJACK"]
 
 config.av = ConfigSubsection()
-if getBrandOEM() in ('azbox'):
+if getBrandOEM() in ('azbox',):
 	config.av.edid_override = ConfigYesNo(default = True)
 else:
 	config.av.edid_override = ConfigYesNo(default = False)
@@ -107,10 +107,10 @@ class AVSwitch:
 	elif (about.getChipSetString() in ('7252', '7251', '7251S', '7252S', '7251s', '7252s', '72604', '7278', '7444s', '3798mv200', '3798cv200', 'hi3798mv200', 'hi3798cv200')):
 		modes["HDMI"] = ["720p", "1080p", "2160p", "2160p30", "1080i", "576p", "576i", "480p", "480i"]
 		widescreen_modes = {"720p", "1080p", "1080i", "2160p", "2160p30"}
-	elif (about.getChipSetString() in ('7241', '7358', '7362', '73625', '7346', '7356', '73565', '7424', '7425', '7435', '7552', '7581', '7584', '75845', '7585', 'pnx8493', '7162', '7111')) or (getBrandOEM() in ('azbox')):
+	elif (about.getChipSetString() in ('7241', '7358', '7362', '73625', '7346', '7356', '73565', '7424', '7425', '7435', '7552', '7581', '7584', '75845', '7585', 'pnx8493', '7162', '7111', '3716mv410', 'hi3716mv410')) or (getBrandOEM() in ('azbox')):
 		modes["HDMI"] = ["720p", "1080p", "1080i", "576p", "576i", "480p", "480i"]
 		widescreen_modes = {"720p", "1080p", "1080i"}
-	elif about.getChipSetString() in ('meson-6'):
+	elif about.getChipSetString() in ('meson-6',):
 		modes["HDMI"] = ["720p", "1080p", "1080i"]
 		widescreen_modes = {"720p", "1080p", "1080i"}
 	elif about.getChipSetString() in ('meson-64','S905D'):
@@ -132,7 +132,7 @@ class AVSwitch:
 	if modes.has_key("Scart") and not has_scart and not has_rca and not has_avjack:
 			del modes["Scart"]
 		
-	if getBoxType() in ('mutant2400'):
+	if getBoxType() in ('mutant2400',):
 		f = open("/proc/stb/info/board_revision", "r").read()
 		if f >= "2":
 			del modes["YPbPr"]
@@ -205,7 +205,7 @@ class AVSwitch:
 		rate = self.rates[mode][rate]
 		for mode in rate.values():
 			if port == "DVI":
-				if getBrandOEM() in ('azbox'):
+				if getBrandOEM() in ('azbox',):
 					if mode not in self.modes_preferred and not config.av.edid_override.value:
 						print "[AVSwitch] no, not preferred"
 						return False
@@ -264,7 +264,7 @@ class AVSwitch:
 			except IOError:
 				print "[VideoHardware] cannot open /proc/stb/video/videomode_24hz"
 
-		if getBrandOEM() in ('gigablue'):
+		if getBrandOEM() in ('gigablue',):
 			try:
 				# use 50Hz mode (if available) for booting
 				f = open("/etc/videomode", "w")
@@ -1210,6 +1210,45 @@ def InitAVSwitch():
 		config.av.transcodeaac.addNotifier(setAACTranscode)
 	else:
 		config.av.transcodeaac = ConfigNothing()
+
+	if os.path.exists("/proc/stb/audio/btaudio"):
+		f = open("/proc/stb/audio/btaudio", "r")
+		can_btaudio = f.read().strip().split(" ")
+		f.close()
+	else:
+		can_btaudio = False
+
+	SystemInfo["CanBTAudio"] = can_btaudio
+
+	if can_btaudio:
+		def setBTAudio(configElement):
+			f = open("/proc/stb/audio/btaudio", "w")
+			f.write(configElement.value)
+			f.close()
+		choice_list = [("off", _("off")), ("on", _("on"))]
+		config.av.btaudio = ConfigSelection(choices = choice_list, default = "off")
+		config.av.btaudio.addNotifier(setBTAudio)
+	else:
+		config.av.btaudio = ConfigNothing()
+
+	if os.path.exists("/proc/stb/audio/btaudio_delay"):
+		f = open("/proc/stb/audio/btaudio_delay", "r")
+		can_btaudio_delay = f.read().strip().split(" ")
+		f.close()
+	else:
+		can_btaudio_delay = False
+
+	SystemInfo["CanBTAudioDelay"] = can_btaudio_delay
+
+	if can_btaudio_delay:
+		def setBTAudioDelay(configElement):
+			f = open("/proc/stb/audio/btaudio_delay", "w")
+			f.write(format(configElement.value * 90,"x"))
+			f.close()
+		config.av.btaudiodelay = ConfigSelectionNumber(-1000, 1000, 5, default = 0)
+		config.av.btaudiodelay.addNotifier(setBTAudioDelay)
+	else:
+		config.av.btaudiodelay = ConfigNothing()
 
 	if os.path.exists("/proc/stb/vmpeg/0/pep_scaler_sharpness"):
 		def setScaler_sharpness(config):

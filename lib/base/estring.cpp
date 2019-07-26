@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <regex>
 #include <cctype>
 #include <climits>
 #include <string>
@@ -636,10 +637,10 @@ std::string convertDVBUTF8(const unsigned char *data, int len, int table, int ts
 			break;
 	}
 
-	if (convertedLen < len)
-		eDebug("[convertDVBUTF8] %d chars converted, and %d chars left..", convertedLen, len-convertedLen);
+//	if (convertedLen < len)
+//		eDebug("[convertDVBUTF8] %d chars converted, and %d chars left..", convertedLen, len-convertedLen);
 
-        if (pconvertedLen)
+	if (pconvertedLen)
 		*pconvertedLen = convertedLen;
 
 	if (verbose)
@@ -930,4 +931,12 @@ std::string string_to_hex(const std::string& input)
         output.push_back(lut[c & 15]);
     }
     return output;
+}
+
+std::string strip_non_graph(std::string s)
+{
+	s = std::regex_replace(s, std::regex("[[^:graph:]]"), " ");
+	s = std::regex_replace(s, std::regex("\\s{2,}"), " ");
+	s = std::regex_replace(s, std::regex("^\\s+|\\s+$"), "");
+	return s;
 }

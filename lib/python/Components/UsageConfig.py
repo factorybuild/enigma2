@@ -439,7 +439,7 @@ def InitUsageConfig():
 	config.usage.show_channel_numbers_in_servicelist.addNotifier(refreshServiceList)
 
 	#standby
-	if getDisplayType() in ('textlcd7segment'):
+	if getDisplayType() in ('7segment',):
 		config.usage.blinking_display_clock_during_recording = ConfigSelection(default = "Rec", choices = [
 						("Rec", _("REC")), 
 						("RecBlink", _("Blinking REC")), 
@@ -448,23 +448,22 @@ def InitUsageConfig():
 		config.usage.blinking_display_clock_during_recording = ConfigYesNo(default = False)
 		
 	#in use
-	if getDisplayType() in ('textlcd'):
+	if getDisplayType() in ('textlcd',):
 		config.usage.blinking_rec_symbol_during_recording = ConfigSelection(default = "Channel", choices = [
 						("Rec", _("REC Symbol")), 
 						("RecBlink", _("Blinking REC Symbol")), 
 						("Channel", _("Channelname"))])
-	if getDisplayType() in ('textlcd7segment'):
+	if getDisplayType() in ('7segment',):
 		config.usage.blinking_rec_symbol_during_recording = ConfigSelection(default = "Rec", choices = [
 						("Rec", _("REC")), 
 						("RecBlink", _("Blinking REC")), 
 						("Time", _("Time"))])
 	else:
 		config.usage.blinking_rec_symbol_during_recording = ConfigYesNo(default = True)
-		
-	if getDisplayType() in ('textlcd7segment'):
-		config.usage.show_in_standby = ConfigSelection(default = "time", choices = [
-						("time", _("Time")), 
-						("nothing", _("Nothing"))])
+
+	config.usage.show_in_standby = ConfigSelection(default = "time", choices = [
+					("time", _("Time")), 
+					("nothing", _("Nothing"))])
 
 	config.usage.show_message_when_recording_starts = ConfigYesNo(default = True)
 
@@ -650,7 +649,7 @@ def InitUsageConfig():
 	config.network = ConfigSubsection()
 	if SystemInfo["WakeOnLAN"]:
 		def wakeOnLANChanged(configElement):
-			if getBoxType() in ('et7000', 'et7100', 'et7500', 'gbx1', 'gbx2', 'gbx3', 'gbx3h', 'et10000', 'gbquadplus', 'gbquad', 'gb800ueplus', 'gb800seplus', 'gbultraue', 'gbultraueh', 'gbultrase', 'gbipbox', 'quadbox2400', 'mutant2400', 'et7x00', 'et8500', 'et8500s'):
+			if getBoxType() in ('multibox','hd61','hd60','h9twin','h9combo','h10','h9','et7000', 'et7100', 'et7500', 'gbx1', 'gbx2', 'gbx3', 'gbx3h', 'et10000', 'gbquadplus', 'gbquad', 'gb800ueplus', 'gb800seplus', 'gbultraue', 'gbultraueh', 'gbultrase', 'gbipbox', 'quadbox2400', 'mutant2400', 'et7x00', 'et8500', 'et8500s'):
 				open(SystemInfo["WakeOnLAN"], "w").write(configElement.value and "on" or "off")
 			else:
 				open(SystemInfo["WakeOnLAN"], "w").write(configElement.value and "enable" or "disable")
@@ -948,7 +947,12 @@ def InitUsageConfig():
 	config.logmanager.sentfiles = ConfigLocations(default='')
 
 	config.plisettings = ConfigSubsection()
-	config.plisettings.Subservice = ConfigYesNo(default = True)
+	#config.plisettings.Subservice = ConfigYesNo(default = True)
+	config.plisettings.Subservice = ConfigSelection(default="3", choices = [
+					("0", _("No, show always the timer list")),
+					("1", _("No, show always the plugin browser")),
+					("2", _("Yes, but if not available show the timer list")),
+					("3", _("Yes, but if not available show the plugin browser"))])
 	config.plisettings.ColouredButtons = ConfigYesNo(default = False)
 	config.plisettings.InfoBarEpg_mode = ConfigSelection(default="3", choices = [
 					("0", _("as plugin in extended bar")),
