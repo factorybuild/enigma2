@@ -8212,7 +8212,7 @@ msgstr "Nichts tun, nur das Menü verlassen"
 
 msgctxt "now/next: 'now' event label"
 msgid "Now"
-msgstr ""
+msgstr "Jetzt"
 
 # ImageBackup.py
 msgid "Now building the Backup Image"
@@ -14870,7 +14870,7 @@ msgid "Videoformat"
 msgstr "Videoformat"
 
 msgid "Videomode"
-msgstr "Videoodus"
+msgstr "Videomodus"
 
 msgid "Videosetup"
 msgstr "Video-Einstellungen"
